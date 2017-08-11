@@ -1,6 +1,7 @@
-from django.db import models
 from django.conf import settings
+from django.db import models
 from django.utils.translation import ugettext_lazy as _
+
 
 class Sprint(models.Model):
     """Development iteration period."""
@@ -11,6 +12,7 @@ class Sprint(models.Model):
     
     def __str__(self):
         return self.name or _('Sprint ending %s') % self.end
+
 
 class Task(models.Model):
     """Unit of work to be done for the sprint."""
